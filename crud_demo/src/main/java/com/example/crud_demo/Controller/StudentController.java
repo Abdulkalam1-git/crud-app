@@ -16,6 +16,7 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    //Add
     @PostMapping("/create")
     public ResponseMessage<Student> saveOrUpdateStudent(@RequestBody Student student) {
         Student result;
@@ -29,7 +30,7 @@ public class StudentController {
             return new ResponseMessage<>("Success", "Student created successfully", result);
         }
     }
-
+    //Get
     @GetMapping("/search")
     public ResponseMessage<?> getStudents(
             @RequestParam(required = false) String id,
@@ -55,7 +56,7 @@ public class StudentController {
             return new ResponseMessage<>("Success", "All students retrieved", students);
         }
     }
-
+    //Delete
     @DeleteMapping()
     public ResponseMessageWithoutData deleteStudent(
             @RequestParam(required = false) String id,
