@@ -49,15 +49,6 @@ public class StudentService {
             throw new RuntimeException("Student not found with ID: " + id);
         }
     }
-
-//    // Create or Update student
-//    public Student createOrUpdateStudent(Student student) {
-//        if (student.getId() != null) {
-//            return updateStudent(student.getId(), student);
-//        } else {
-//            return addStudent(student);
-//        }
-//    }
     // Delete student by ID
     public void deleteStudentById(String id) {
         studentRepository.deleteById(id);
